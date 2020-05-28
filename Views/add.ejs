@@ -16,59 +16,64 @@
                 </a>
                 <ul class='hidemob' id='nav'>
                     <li id='exit' class="exit_btn hidedesk"><img src="images/exit.svg" alt="Exit Button"></li>
-                    <li><a href ="#"> Home </a></li>
-                    <li><a href ="#"> About </a></li>
-                    <li><a href ="#"> Contact </a></li>
-                    <li><a href ="#"> Login/SignUp </a></li>
+                    <li><a href ="/"> Home </a></li>
+                    <li><a href ="/us"> About </a></li>
+                    <li><a href ="/us"> Contact </a></li>
+                    <li><a href ="/phone_dic"> Show PhoneBook </a></li>
                 </ul>
             </nav>
         </header>
         <div class="black_container">
             <div class="for">
-                <form action="/register" method="POST">
+                <ul>
+                    <% if(typeof errors != 'undefined'){ %> <% errors.forEach(error=>{ %>
+                    <li><%= error.message %></li>
+                    <% }) %> <% } %>
+                </ul> 
+                <form action="/add" method="POST">
                 <div width class="fore">
                     <label for="name">Name: </label> 
-                    <input type="text" id="name" placeholder="Name" required>
+                    <input type="text" id="name" placeholder="Name" name="name" required>
                 </div>
                 <div width class="fore">
                     <label for="dob">Date Of Birth: </label> 
-                    <input type="date" id="dob" placeholder="DOB">
+                    <input type="date" id="dob" placeholder="DOB" name="dob">
                 </div>
                 <div width class="fore">
                     <label for="ph1">Phone No.: </label> 
-                    <input type="text" id="ph1" placeholder="Phone No." required>
+                    <input type="text" id="ph1" placeholder="Phone No." name="ph1" required>
                 </div>
                 <div width class="fore hid" id="dph2">
                     <label for="ph2">Phone No.: </label> 
-                    <input type="text" id="ph2" placeholder="Phone No.">
+                    <input type="text" id="ph2" placeholder="Phone No." name="ph2">
                 </div>
                 <div width class="fore hid" id="dph3">
                     <label for="ph3">Phone No.: </label> 
-                    <input type="text" id="ph3" placeholder="Phone No.">
+                    <input type="text" id="ph3" placeholder="Phone No." name="ph3">
                 </div>
                 <div width class="fore hid" id="dph4">
                     <label for="ph4">Phone No.: </label> 
-                    <input type="text" id="ph4" placeholder="Phone No.">
+                    <input type="text" id="ph4" placeholder="Phone No." name="ph4">
                 </div>
                 <div width class="fore hid" id="dph5">
                     <label for="ph5">Phone No.: </label> 
-                    <input type="text" id="ph5" placeholder="Phone No.">
+                    <input type="text" id="ph5" placeholder="Phone No." name="ph5">
                 </div>
                 <div width class="fore" id="em1">
                     <label for="em1">Email ID.: </label> 
-                    <input type="email" id="em1" placeholder="Email ID.">
+                    <input type="email" id="em1" placeholder="Email ID." name="em1">
                 </div>
                 <div width class="fore hidem" id="em2">
                     <label for="em2">Email ID.: </label> 
-                    <input type="email" id="em2" placeholder="Email ID.">
+                    <input type="email" id="em2" placeholder="Email ID." name="em2">
                 </div>
                 <div width class="fore hidem" id="em3">
                     <label for="em3">Email ID.: </label> 
-                    <input type="email" id="em3" placeholder="Email ID.">
+                    <input type="email" id="em3" placeholder="Email ID." name="em3">
                 </div>
                 <br>
                 <div>
-                    <input type="submit">
+                    <input type="submit", value="ADD">
                 </div>
                 
                 <div class="disp-inl">
