@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone_Directory</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="images/pb_icon.svg" alt="Phone Book Icon" class="logo">
+            <nav>
+                <a href="#" class="hidedesk">
+                    <img src="images/ham.svg" atl="MENU" class="menu" id='menu'>
+                </a>
+                <ul class='hidemob' id='nav'>
+                    <li id='exit' class="exit_btn hidedesk"><img src="images/exit.svg" alt="Exit Button"></li>
+                    <li><a href ="#"> Home </a></li>
+                    <li><a href ="#"> About </a></li>
+                    <li><a href ="#"> Contact </a></li>
+                    <li><a href ="#"> Login/SignUp </a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="black_container">
+            <div class="tab">
+                <table>
+                    <tr>
+                        <th colspan="2">PhoneBook</th>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>Name = </td>
+                    </tr>
+                    <tr>
+                        <td>D.O.B</td>
+                        <td>Dob= </td>
+                    </tr>
+                    <tr>
+                        <td>Phone No. 1</td>
+                        <td>Ph1= </td>
+                    </tr>
+                </table>
+                <br>
+            </div>
+        </div>
+        <!-- <div class="pagination">
+            <a href="#"> &laquo;</a>
+            <a href="#"> 1</a>
+            <a href="#"> 2</a>
+            <a href="#"> 3</a>
+            <a href="#"> 4</a>
+            <a href="#"> 5</a>
+            <a href="#"> &raquo;;</a> -->
+        <footer>
+            <div class="footer-cont">
+                <div class="container">
+                    <a href="#"><img src="images/pb_icon.svg" alt="Logo" class="logo"></a>
+                    <p class="address">3rd Floor, Sona Towers,<br>
+                                       Hosur Rd, Industrial Area, Krishna Nagar,<br>
+                                       Bengaluru,<br>
+                                       Karnataka,<br>
+                                       560029
+                    </p>
+                    <ul class='footer-line'>
+                        <li><a href="#" class="gcol">Go to Top</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <script>
+            var menu=document.getElementById('menu');
+            var nav=document.getElementById('nav');
+            var exit=document.getElementById('exit');
+            menu.addEventListener('click',function(e){
+                nav.classList.toggle('hidemob');
+            });
+            exit.addEventListener('click',function(e){
+                nav.classList.toggle('hidemob');
+            });
+        </script>
+    </div>
+</body>
+</html>

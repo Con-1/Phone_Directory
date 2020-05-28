@@ -1,30 +1,25 @@
-const express=require("express")
-const app=express()
-const path=require("path");
-app.use(express.static(path.join(__dirname,"Template")));
-app.get("/",function(req,res){
-    res.sendFile(path.join(__dirname,"Template","index.html"));
+const express=require("express");
+const path=require("path"); 
+const pg=require('pg');
+const {pool}=require("./dbconfig");
+const app=express();
+app.set("view engine","ejs");
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname,"Views")));
+app.get("/",(req,res)=>{
+    // pool.query('SELECT * FROM tab',(err,result)=>{
+    //     if (err) {
+    //         console.log("Error Happened"+err);
+    //       }
+    //       console.log(result.rows.length);
+    //     }
+    // );
+    res.render('index');
 });
-app.listen(3000,function(){
-    console.log("UP and Runnig..")
+app.get("/add",(req,res)=>{
+    res.render('add');
 });
-// const http =require('http');
-// const fs = require('fs');
 
-// const server=http.createServer((req,res)=>{
-//     if(req.url==='/'){
-//         // res.write("Hello");
-//         // res.end();
-//         fs.readFile('./index.html',null,function(error,data){
-//             if(error){
-//                 res.write("Erorr");
-//             }
-//             else{
-//                 res.write(data)
-//             }
-//             res.end();
-//         });
-//     }
-// });
-// server.listen(3000);
-// console.log('Server Up');
+app.listen(4000,()=>{
+    console.log("Started");
+});

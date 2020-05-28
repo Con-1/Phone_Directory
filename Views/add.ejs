@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone_Directory</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="images/pb_icon.svg" alt="Phone Book Icon" class="logo">
+            <nav>
+                <a href="#" class="hidedesk">
+                    <img src="images/ham.svg" atl="MENU" class="menu" id='menu'>
+                </a>
+                <ul class='hidemob' id='nav'>
+                    <li id='exit' class="exit_btn hidedesk"><img src="images/exit.svg" alt="Exit Button"></li>
+                    <li><a href ="#"> Home </a></li>
+                    <li><a href ="#"> About </a></li>
+                    <li><a href ="#"> Contact </a></li>
+                    <li><a href ="#"> Login/SignUp </a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="black_container">
+            <div class="for">
+                <form action="/register" method="POST">
+                <div width class="fore">
+                    <label for="name">Name: </label> 
+                    <input type="text" id="name" placeholder="Name" required>
+                </div>
+                <div width class="fore">
+                    <label for="dob">Date Of Birth: </label> 
+                    <input type="date" id="dob" placeholder="DOB">
+                </div>
+                <div width class="fore">
+                    <label for="ph1">Phone No.: </label> 
+                    <input type="text" id="ph1" placeholder="Phone No." required>
+                </div>
+                <div width class="fore hid" id="dph2">
+                    <label for="ph2">Phone No.: </label> 
+                    <input type="text" id="ph2" placeholder="Phone No.">
+                </div>
+                <div width class="fore hid" id="dph3">
+                    <label for="ph3">Phone No.: </label> 
+                    <input type="text" id="ph3" placeholder="Phone No.">
+                </div>
+                <div width class="fore hid" id="dph4">
+                    <label for="ph4">Phone No.: </label> 
+                    <input type="text" id="ph4" placeholder="Phone No.">
+                </div>
+                <div width class="fore hid" id="dph5">
+                    <label for="ph5">Phone No.: </label> 
+                    <input type="text" id="ph5" placeholder="Phone No.">
+                </div>
+                <div width class="fore" id="em1">
+                    <label for="em1">Email ID.: </label> 
+                    <input type="email" id="em1" placeholder="Email ID.">
+                </div>
+                <div width class="fore hidem" id="em2">
+                    <label for="em2">Email ID.: </label> 
+                    <input type="email" id="em2" placeholder="Email ID.">
+                </div>
+                <div width class="fore hidem" id="em3">
+                    <label for="em3">Email ID.: </label> 
+                    <input type="email" id="em3" placeholder="Email ID.">
+                </div>
+                <br>
+                <div>
+                    <input type="submit">
+                </div>
+                
+                <div class="disp-inl">
+                    <div class="inadd">
+                        <img src="images/add.png" width=30em id="phad">
+                        <br>
+                        Add Phone No.  
+                    </div>
+                    <div>
+                        <img src="images/add.png" width=30em id="emad">
+                        <br>
+                          Add Email ID.
+                    </div>
+                </div>
+                </form>
+                <br>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-cont">
+                <div class="container">
+                    <a href="#"><img src="images/pb_icon.svg" alt="Logo" class="logo"></a>
+                    <p class="address">3rd Floor, Sona Towers,<br>
+                                       Hosur Rd, Industrial Area, Krishna Nagar,<br>
+                                       Bengaluru,<br>
+                                       Karnataka,<br>
+                                       560029
+                    </p>
+                    <ul class='footer-line'>
+                        <li><a href="#" class="gcol">Go to Top</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <script>
+            var phah=document.getElementById('phad');
+            var dph2=document.getElementById('dph2');
+            var dph3=document.getElementById('dph3');
+            var dph4=document.getElementById('dph4');
+            var dph5=document.getElementById('dph5');
+            phad.addEventListener('click',function(e){
+                dph2.classList.toggle('hid');
+                dph3.classList.toggle('hid');
+                dph4.classList.toggle('hid');
+                dph5.classList.toggle('hid');       
+            });
+        </script>
+        <script>
+            var emad=document.getElementById('emad');
+            var em2=document.getElementById('em2');
+            var em3=document.getElementById('em3');
+            emad.addEventListener('click',function(e){
+                em2.classList.toggle('hidem');
+                em3.classList.toggle('hidem');
+            });
+        </script>
+        <script>
+            var menu=document.getElementById('menu');
+            var nav=document.getElementById('nav');
+            var exit=document.getElementById('exit');
+            menu.addEventListener('click',function(e){
+                nav.classList.toggle('hidemob');
+            });
+            exit.addEventListener('click',function(e){
+                nav.classList.toggle('hidemob');
+            });
+        </script>
+    </div>
+</body>
+</html>
