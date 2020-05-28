@@ -12,10 +12,10 @@
             <img src="images/pb_icon.svg" alt="Phone Book Icon" class="logo">
             <nav>
                 <a href="#" class="hidedesk">
-                    <img src="images/ham.svg" atl="MENU" class="menu" id="menu">
+                    <img src="images/ham.svg" atl="MENU" class="menu" id='menu'>
                 </a>
-                <ul class="showdesk hidedesk" id="nav">
-                    <li id="exit" class="exit_btn hidedesk"><img src="images/exit.svg" alt="Exit Button"></li>
+                <ul class='hidemob' id='nav'>
+                    <li id='exit' class="exit_btn hidedesk"><img src="images/exit.svg" alt="Exit Button"></li>
                     <li><a href ="#"> Home </a></li>
                     <li><a href ="#"> About </a></li>
                     <li><a href ="#"> Contact </a></li>
@@ -32,21 +32,21 @@
 
     <div class="black_container">
         <div class="container">
-            <ul>
+            <ul class="flxabv">
                 <li>
-                    <a href="#"><img src="images/add.svg" alt="Add Button"></a>
+                    <a href="#"><img src="images/add.png" alt="Add Button" class="choose_img"></a>
                     <p>Add a contact in your Directory</p>
                 </li>
                 <li>
-                    <a href="#"><img src="images/del.svg" alt="Delete Button"></a>
+                    <a href="#"><img src="images/del.png" alt="Delete Button" class="choose_img"></a>
                     <p>Remove a contact from your Directory</p>
                 </li>
                 <li>
-                    <a href="#"><img src="images/search.svg" alt="Search Button"></a>
+                    <a href="#"><img src="images/search.png" alt="Search Button" class="choose_img"></a>
                     <p>Search a contact in your Directory</p>
                 </li>
                 <li>
-                    <a href="#"><img src="images/update.svg" alt="Update Button"></a>
+                    <a href="#"><img src="images/update.png" alt="Update Button" class="choose_img"></a>
                     <p>Add a contact in your Directory</p>
                 </li>
             </ul>
@@ -55,7 +55,7 @@
     <footer>
         <div class="footer-cont">
             <div class="container">
-                <a href="#"><img src="images/pb_icon.svg" alt="Logo"></a>
+                <a href="#"><img src="images/pb_icon.svg" alt="Logo" class="logo"></a>
                 <p class="address">3rd Floor, Sona Towers,<br>
                                    Hosur Rd, Industrial Area, Krishna Nagar,<br>
                                    Bengaluru,<br>
@@ -63,10 +63,21 @@
                                    560029
                 </p>
                 <ul class='footer-line'>
-                    <li><a href="#">Go to Top</a></li>
+                    <li><a href="#" class="gcol">Go to Top</a></li>
                 </ul>
             </div>
         </div>
     </footer>
+    <script>
+        var menu=document.getElementById('menu');
+        var nav=document.getElementById('nav');
+        var exit=document.getElementById('exit');
+        menu.addEventListener('click',function(e){
+            nav.classList.toggle('hidemob');
+        });
+        exit.addEventListener('click',function(e){
+            nav.classList.toggle('hidemob');
+        });
+    </script>
 </body>
-</html> 
+</html>  
